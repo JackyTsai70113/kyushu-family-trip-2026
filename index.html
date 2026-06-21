@@ -7,6 +7,7 @@
   <style>
     :root{--ink:#202633;--muted:#647184;--line:#d8e1ea;--paper:#fff;--bg:#f3f6f8;--blue:#2457a6;--green:#24735a;--orange:#a65e16;--red:#ad3f3f;--sky:#eaf2ff;--mint:#eaf7f1;--sand:#fff4e6;--rose:#fff0f0}
     *{box-sizing:border-box}
+    html,body{max-width:100%;overflow-x:hidden}
     body{margin:0;color:var(--ink);background:var(--bg);font-family:Arial,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.55}
     .page{width:min(1240px,calc(100% - 28px));margin:22px auto 42px;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden}
     header{padding:28px 30px 24px;background:linear-gradient(120deg,#f7fbff 0%,#edf8f2 100%);border-bottom:1px solid var(--line)}
@@ -25,11 +26,14 @@
     th{color:#fff;background:var(--blue);text-align:left;font-size:13px}tr:nth-child(even) td{background:#fbfcfe}
     .time{width:12%;font-weight:700;color:var(--blue)}.place{width:24%;font-weight:700}.move{width:18%;color:var(--orange);font-weight:700}.plan{width:29%}.memo{width:17%;color:#434c59}
     a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(36,87,166,.35)}
+    h1,h2,h3,p,li,td,th,.pill,.info-card span,a{overflow-wrap:anywhere}
     .tag{display:inline-block;margin:2px 4px 2px 0;padding:2px 7px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
     .parking{display:block;margin-top:5px;color:var(--green);font-size:12px;font-weight:700;line-height:1.45}
     .blue{color:var(--blue);background:var(--sky)}.green{color:var(--green);background:var(--mint)}.orange{color:var(--orange);background:var(--sand)}.red{color:var(--red);background:var(--rose)}
     .box{padding:14px 15px;border:1px solid var(--line);border-radius:8px;background:#fff;margin-top:12px}ul{margin:8px 0 0;padding-left:20px}li{margin:4px 0}
+    @media(max-width:1100px){.top-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:900px){.page{width:100%;margin:0;border-radius:0;border-left:0;border-right:0}header,main{padding-left:16px;padding-right:16px}.top-grid,.summary{grid-template-columns:1fr}.top-grid{padding:14px 16px}table,thead,tbody,tr,th,td{display:block;width:100%}thead{display:none}tr{margin-bottom:12px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}td{border:0;border-bottom:1px solid var(--line)}td:last-child{border-bottom:0}td::before{display:block;margin-bottom:2px;color:var(--muted);font-size:12px;font-weight:700}.time::before{content:"時間"}.place::before{content:"地點"}.move::before{content:"交通"}.plan::before{content:"安排"}.memo::before{content:"備註"}}
+    @media(max-width:480px){header{padding:22px 14px 18px}main{padding:18px 14px 24px}h1{font-size:24px}h2{font-size:19px}.lead,.section-note,table{font-size:13px}.info-card{min-height:auto}.top-grid{gap:9px}.summary{gap:8px}.pill{padding:9px 10px}.tag{white-space:normal}.parking{font-size:12px}td{padding:9px 10px}}
     @media print{body{background:#fff}.page{width:100%;margin:0;border:0}header{background:#fff}a{color:inherit;border-bottom:0}section{break-inside:avoid}}
   </style>
 </head>
